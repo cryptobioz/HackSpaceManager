@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get update
     sudo apt-get install -y curl nodejs git
     export DEBIAN_FRONTEND=noninteractive
-    sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
+    sudo -E apt-get install -q -y mysql-server mysql-client libmysqlclient-dev
     sudo mysqladmin -u root password root
     unset DEBIAN_FRONTEND
     echo "unset rvm_path" >> ~/.bashrc
